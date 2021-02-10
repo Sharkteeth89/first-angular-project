@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { CardsComponent } from './cards/cards.component';
 import { FormsModule } from '@angular/forms';
 import { CardDetailComponent } from './card-detail/card-detail.component';
-import { MessagesComponent } from './messages/messages.component'; // <-- NgModel lives here
+import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './message.service'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { MessagesComponent } from './messages/messages.component'; // <-- NgMode
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
