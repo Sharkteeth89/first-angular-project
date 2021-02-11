@@ -11,7 +11,8 @@ export class CardService {
 
   constructor(private messageService: MessageService) { }
 
-  /*getCards(): Card[] {
+  /*
+  getCards(): Card[] {
     return CARDS;
   }*/
 
@@ -19,5 +20,5 @@ export class CardService {
   const cards = of(CARDS);
   this.messageService.add('CardService: fetched cards');
   return cards;
-}
+  }
 }

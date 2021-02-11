@@ -7,14 +7,18 @@ import { CardsComponent } from './cards/cards.component';
 import { FormsModule } from '@angular/forms';
 import { CardDetailComponent } from './card-detail/card-detail.component';
 import { MessagesComponent } from './messages/messages.component';
-import { MessageService } from './message.service'; // <-- NgModel lives here
+import { MessageService } from './message.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CardSearchComponent } from './card-search/card-search.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
     AppComponent,
     CardsComponent,
     CardDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent,
+    CardSearchComponent
   ],
   imports: [
     BrowserModule,
