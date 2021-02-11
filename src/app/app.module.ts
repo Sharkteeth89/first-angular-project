@@ -10,6 +10,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CardSearchComponent } from './card-search/card-search.component'; // <-- NgModel lives here
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CardSearchComponent } from './card-search/card-search.component'; // <-
     CardSearchComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule
