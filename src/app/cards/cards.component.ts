@@ -11,29 +11,17 @@ import { MessageService } from '../message.service';
 export class CardsComponent implements OnInit {
   cards: Card[];
 
-  /*card: Card = {
-    id: 1,
-    name: 'Windstorm',
-    description: ""
-  };*/
 
-  selectedCard: Card | undefined; //you can also use !, ? or change tsconfig.json strictPropertyInitialization
-  
-  //defines a private cardService property and identifies it as a CardService injection site.
-  constructor(private cardService: CardService, private messageService: MessageService) {}
-
-  onSelect(card: Card): void {
-    this.selectedCard = card;
-    this.messageService.add(`CardsComponent: Selected card id=${card.id}`);
-  }
-
- getCards(): void {
-  this.cardService.getCards().subscribe(cards => this.cards = cards);
-}
+  constructor(private cardService: CardService) {}
+ 
 
   //Similar to viewDidLoad or onCreate
   ngOnInit() {
   this.getCards();
+}
+
+getCards(): void {
+  this.cardService.getCards().subscribe(cards => this.cards = cards);
 }
 
 }
