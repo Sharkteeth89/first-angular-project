@@ -12,7 +12,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class CardService {
   // URL which returns list of JSON items (API end-point URL)
   private readonly URL =
-    "http://localhost/Laravel/Card_selling/public/api/card/list";
+    "http://localhost:8888/Laravel/Card_selling/public/api/card/list";
 
  private readonly cardURL =
     "http://localhost/Laravel/Card_selling/public/api/card/get/card";
@@ -47,10 +47,12 @@ export class CardService {
   getCards(): Observable<Card[]> {
     const headers = {
       headers: new HttpHeaders({
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/x-www-form-urlencoded",
+        'Access-Control-Allow-Origin' : 'always'
       })
     };
-    return this.http.post<[Card]>(this.URL, { 'card_name': 'Dragon negro'}).pipe(
+    
+    return this.http.post<[Card]>(this.URL, { 'card_name': 'Dragon blanco'}).pipe(
       tap(_ => this.log('fetched cards')),
       catchError(this.handleError<Card[]>('getCards', []))
     );
