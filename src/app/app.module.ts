@@ -13,9 +13,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CardSearchComponent } from './card-search/card-search.component'; // <-- NgModel lives here
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterUsersComponent } from './register-users/register-users.component';
+import { RoleCheckboxComponent } from './role-checkbox/role-checkbox.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import { ExampleCheckboxComponent } from './example-checkbox/example-checkbox.component';
+
 
 
 
@@ -28,7 +29,7 @@ import { ExampleCheckboxComponent } from './example-checkbox/example-checkbox.co
     DashboardComponent,
     CardSearchComponent,   
     RegisterUsersComponent,
-    ExampleCheckboxComponent,
+    RoleCheckboxComponent,
   ],
   imports: [
     HttpClientModule,
