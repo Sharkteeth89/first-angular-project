@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegisterUsersComponent } from './register-users/register-users.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import { DropdownComponent } from './dropdown/dropdown.component';
+import { ExampleCheckboxComponent } from './example-checkbox/example-checkbox.component';
 
 
 
@@ -28,7 +28,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     DashboardComponent,
     CardSearchComponent,   
     RegisterUsersComponent,
-    DropdownComponent,
+    ExampleCheckboxComponent,
   ],
   imports: [
     HttpClientModule,
